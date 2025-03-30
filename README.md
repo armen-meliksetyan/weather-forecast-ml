@@ -5,17 +5,23 @@ A Flask API for predicting weather conditions in New York City using historical 
 ## Project Structure
 ```
 Weather_Prediction/
-├── data/                   # Raw and processed datasets
-│   └── NYC_Weather_2016_2022.csv
-├── models/                 # Trained models
-│   └── model.pkl
-├── notebooks/              # Jupyter notebooks for EDA and modeling
-│   └── Weather_Prediction_Project.ipynb
-│── app.py                  # Flask API server
-│── api_client.py           # API test client
+├── data/                   # All data-related files
+│   ├── NYC_Weather_2016_2022.csv          # Raw historical weather dataset
+│   └── predictions/                       # Folder for model output files
+│       └── test_predictions.csv           # CSV containing model predictions vs actuals
+│
+├── models/                 # Serialized model artifacts
+│   ├── model.pkl                          # Trained machine learning model
+│   └── scaler.pkl                         # Fitted StandardScaler for data normalization
+│
+├── notebooks/              # Experimental/analysis work
+│   └── Weather_Prediction_Project.ipynb   # Jupyter notebook for model development
+│
+├── app.py                  # Flask application serving predictions
+├── api_client.py           # Script for testing API endpoints
 │   
-├── requirements.txt        # Python dependencies
-└── README.md               # This file
+├── requirements.txt        # Python package dependencies
+└── README.md               # Project documentation and setup instructions
 ```
 
 ## Features
@@ -30,8 +36,8 @@ Weather_Prediction/
 
 1. **Clone the repository**
    ```bash
-   git clone [your-repo-url]
-   cd TASK_NYW
+   git clone https://github.com/armen-meliksetyan/weather-forecast-ml.git
+   cd weather-forecast-ml
    ```
 
 2. **Create virtual environment**
