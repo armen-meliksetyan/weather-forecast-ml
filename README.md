@@ -15,7 +15,8 @@ Weather_Prediction/
 │   └── scaler.pkl                         # Fitted StandardScaler for data normalization
 │
 ├── notebooks/              # Experimental/analysis work
-│   └── Weather_Prediction_Project.ipynb   # Jupyter notebook for model development
+│   |── sklearn.ipynb                      # Experiments with traditional ML models (Linear, RF) using
+|   └── pytorch.ipynb                      # Experiments with Neural Networks using PyTorch
 │
 ├── app.py                  # Flask application serving predictions
 ├── api_client.py           # Script for testing API endpoints
@@ -25,12 +26,13 @@ Weather_Prediction/
 ```
 
 ## Features
-- Linear regression model trained on 6 years of NYC weather data
+- Weather prediction models trained on 6 years of NYC weather data
 - REST API endpoint for predictions
+- Explored and evaluated multiple regression models
 - Handles 38 weather features including:
   - Precipitation, cloud cover, wind metrics
   - 24-hour temperature lags
-  - Temporal features (hour, day, month, year)
+  - Temporal features (hour, day, month, year, encoded cyclically)
 
 ## Setup
 
