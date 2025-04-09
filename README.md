@@ -91,6 +91,7 @@ python api_client.py
 - requests
 - pandas
 - scikit-learn
+- pytorch
 - numpy
 - matplotlib
 - seaborn
